@@ -328,7 +328,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </div>
 
                 {/* PRIMEIRO CARROSSEL DE VÍDEOS - movido de baixo */}
-                <div className="mb-6">
+                <div className="mb-6 max-w-md mx-auto">
                   <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={16}
@@ -406,7 +406,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </div>
 
                 {/* Carrossel de Imagens */}
-                <div className="mb-6">
+                <div className="mb-6 max-w-md mx-auto">
                   <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
                     spaceBetween={16}
@@ -453,7 +453,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </div>
 
                 {/* SEGUNDO CARROSSEL DE VÍDEOS - movido do final */}
-                <div className="mb-6">
+                <div className="mb-6 max-w-md mx-auto">
                   <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={12}
@@ -673,7 +673,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </div>
 
                 {/* PRIMEIRO CARROSSEL DE VÍDEOS - movido de baixo */}
-                <div className="mb-6">
+                <div className="mb-6 max-w-md mx-auto">
                   <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={16}
@@ -751,7 +751,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </div>
 
                 {/* Carrossel de Imagens */}
-                <div className="mb-6">
+                <div className="mb-6 max-w-md mx-auto">
                   <Swiper
                     modules={[Navigation, Pagination, Autoplay]}
                     spaceBetween={16}
@@ -798,7 +798,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </div>
 
                 {/* SEGUNDO CARROSSEL DE VÍDEOS - movido do final */}
-                <div className="mb-6">
+                <div className="mb-6 max-w-md mx-auto">
                   <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={12}
