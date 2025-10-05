@@ -83,11 +83,12 @@ const Testimonials = () => {
             modules={[Navigation, Pagination]}
             spaceBetween={12}
             slidesPerView={1}
+            centeredSlides={true}
             breakpoints={{
-              640: { slidesPerView: 1.3, spaceBetween: 16 },
-              768: { slidesPerView: 1.8, spaceBetween: 20 },
-              1024: { slidesPerView: 2.3, spaceBetween: 24 },
-              1280: { slidesPerView: 2.8, spaceBetween: 28 }
+              640: { slidesPerView: 1.3, spaceBetween: 16, centeredSlides: true },
+              768: { slidesPerView: 1.8, spaceBetween: 20, centeredSlides: true },
+              1024: { slidesPerView: 2.3, spaceBetween: 24, centeredSlides: true },
+              1280: { slidesPerView: 2.8, spaceBetween: 28, centeredSlides: true }
             }}
             loop={true}
             navigation={true}
@@ -142,49 +143,115 @@ const Testimonials = () => {
         </div>
 
         {/* Carrossel de Imagens de Depoimentos - COM AUTOPLAY CONTÍNUO */}
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={16}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 2, spaceBetween: 20 },
-            768: { slidesPerView: 3, spaceBetween: 24 },
-            1024: { slidesPerView: 4, spaceBetween: 24 }
-          }}
-          loop={true}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true
-          }}
-          navigation={true}
-          pagination={{ 
-            clickable: true,
-            dynamicBullets: true
-          }}
-          className="mb-8 md:mb-12"
-        >
-          {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={index}>
-              <div className="bg-white rounded-xl p-3 md:p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200">
-                <div className="flex flex-col items-center">
-                  <div className="w-full aspect-square overflow-hidden rounded-lg mb-2 md:mb-3">
-                    <img
-                      src={testimonial.image}
-                      alt={`Depoimento ${index + 1}`}
-                      className="w-full h-full object-contain bg-gray-50"
-                    />
-                  </div>
-                  <div className="flex items-center justify-center">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-3 w-3 md:h-4 md:w-4 text-yellow-400 fill-current" />
-                    ))}
+        <div className="mb-8 md:mb-12">
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            spaceBetween={16}
+            slidesPerView={1}
+            breakpoints={{
+              640: { slidesPerView: 2, spaceBetween: 20 },
+              768: { slidesPerView: 3, spaceBetween: 24 },
+              1024: { slidesPerView: 4, spaceBetween: 24 }
+            }}
+            loop={true}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true
+            }}
+            navigation={true}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true
+            }}
+            className="mb-8 md:mb-12"
+          >
+            {testimonials.map((testimonial, index) => (
+              <SwiperSlide key={index}>
+                <div className="bg-white rounded-xl p-3 md:p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200">
+                  <div className="flex flex-col items-center">
+                    <div className="w-full aspect-square overflow-hidden rounded-lg mb-2 md:mb-3">
+                      <img
+                        src={testimonial.image}
+                        alt={`Depoimento ${index + 1}`}
+                        className="w-full h-full object-contain bg-gray-50"
+                      />
+                    </div>
+                    <div className="flex items-center justify-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="h-3 w-3 md:h-4 md:w-4 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+
+        {/* Segundo Carrossel de Depoimentos em Vídeo - COM LOOP INFINITO */}
+        <div className="mb-8 md:mb-12">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={12}
+            slidesPerView={1}
+            centeredSlides={true}
+            breakpoints={{
+              640: { slidesPerView: 1.3, spaceBetween: 16, centeredSlides: true },
+              768: { slidesPerView: 1.8, spaceBetween: 20, centeredSlides: true },
+              1024: { slidesPerView: 2.3, spaceBetween: 24, centeredSlides: true },
+              1280: { slidesPerView: 2.8, spaceBetween: 28, centeredSlides: true }
+            }}
+            loop={true}
+            navigation={true}
+            pagination={{
+              clickable: true,
+              dynamicBullets: true
+            }}
+            onSlideChange={pauseAllVideos}
+            className="mb-8 testimonials-carousel"
+          >
+            {videoTestimonials.map((videoUrl, index) => (
+              <SwiperSlide key={`second-${index}`}>
+                <div className="relative aspect-square bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                  <video
+                    className="absolute inset-0 w-full h-full object-contain testimonial-video bg-black"
+                    preload="metadata"
+                    playsInline
+                    controls
+                    controlsList="nodownload"
+                    onContextMenu={(e) => e.preventDefault()}
+                    src={videoUrl}
+                    onPlay={(e) => {
+                      const allVideos = document.querySelectorAll('video');
+                      allVideos.forEach(video => {
+                        if (video !== e.currentTarget && !video.paused) {
+                          video.pause();
+                        }
+                      });
+                    }}
+                  >
+                    <style>
+                      {`
+                        video::-webkit-media-controls-overflow-menu-button,
+                        video::-webkit-media-controls-overflow-menu-list,
+                        video::-webkit-media-controls-download-button {
+                          display: none !important;
+                        }
+                        video::-webkit-media-controls-enclosure {
+                          overflow: hidden !important;
+                        }
+                        video::-webkit-media-controls-panel {
+                          overflow: clip !important;
+                        }
+                      `}
+                    </style>
+                  </video>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
         <div className="mt-8 md:mt-12 text-center">
           <div className="inline-block bg-blue-50 rounded-lg p-4 md:p-6 border border-blue-200 shadow-lg">
