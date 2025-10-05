@@ -277,10 +277,42 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
               </div>
 
               {/* Novo título centralizado em negrito após o áudio */}
-              <div className="mb-4 text-center">
-                <p className="text-xl text-gray-600">
-                  Aqui você se juntará aos mais de 100.000 brasileiros que tem um plano de internet móvel realmente ilimitado, tanto para área urbana como rural. Ativação disponível no chip físico ou virtual. Chega de sofrer com internet ruim.
-                </p>
+              <div className="mb-6 text-center">
+                <div className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 rounded-2xl p-6 shadow-lg border border-blue-100">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full filter blur-3xl opacity-30 -z-10"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-200 rounded-full filter blur-2xl opacity-20 -z-10"></div>
+
+                  <p className="text-lg text-gray-700 leading-relaxed mb-3">
+                    Aqui você se juntará aos mais de
+                  </p>
+
+                  <div className="mb-3">
+                    <span className="text-6xl font-black text-blue-600 tracking-tight block leading-none">
+                      100.000
+                    </span>
+                    <span className="text-xl font-bold text-gray-800 mt-2 block">
+                      brasileiros
+                    </span>
+                  </div>
+
+                  <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                    que têm um plano de internet móvel <span className="font-bold text-gray-900">realmente ilimitado</span>, tanto para <span className="font-semibold text-gray-800">área urbana como rural</span>.
+                  </p>
+
+                  <div className="flex items-center justify-center gap-4 mb-3 flex-wrap">
+                    <div className="bg-white rounded-lg px-4 py-2 shadow-sm border border-blue-100">
+                      <span className="text-sm font-semibold text-blue-600">Chip Físico</span>
+                    </div>
+                    <div className="text-blue-400 font-bold">ou</div>
+                    <div className="bg-white rounded-lg px-4 py-2 shadow-sm border border-blue-100">
+                      <span className="text-sm font-semibold text-blue-600">Chip Virtual</span>
+                    </div>
+                  </div>
+
+                  <p className="text-base font-bold text-red-600 bg-red-50 inline-block px-4 py-2 rounded-lg">
+                    Chega de sofrer com internet ruim
+                  </p>
+                </div>
               </div>
 
               {/* Seção de Depoimentos movida para cá */}
@@ -506,7 +538,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 <div className="text-center">
                   <button
                     onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-                    className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600 shadow-lg text-base py-3 px-6"
+                    className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600 shadow-lg text-lg py-4 px-6"
                   >
                     Quero Fazer Parte Também
                   </button>
