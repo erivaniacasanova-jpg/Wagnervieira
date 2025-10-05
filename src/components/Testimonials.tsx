@@ -78,26 +78,30 @@ const Testimonials = () => {
         </div>
 
         {/* Carrossel de Depoimentos em Vídeo - SEM AUTOPLAY E SEM TÍTULO */}
-        <div className="mb-8 md:mb-12">
+        <div className="mb-8 md:mb-12 overflow-hidden">
           <Swiper
             modules={[Navigation, Pagination]}
-            spaceBetween={16}
-            slidesPerView={1.4}
+            spaceBetween={20}
+            slidesPerView={1.2}
             centeredSlides={true}
+            initialSlide={1}
             breakpoints={{
-              640: { slidesPerView: 1.5, spaceBetween: 20, centeredSlides: true },
-              768: { slidesPerView: 1.6, spaceBetween: 24, centeredSlides: true },
-              1024: { slidesPerView: 1.8, spaceBetween: 28, centeredSlides: true },
-              1280: { slidesPerView: 2.0, spaceBetween: 32, centeredSlides: true }
+              480: { slidesPerView: 1.3, spaceBetween: 24, centeredSlides: true },
+              640: { slidesPerView: 1.4, spaceBetween: 28, centeredSlides: true },
+              768: { slidesPerView: 1.5, spaceBetween: 32, centeredSlides: true },
+              1024: { slidesPerView: 1.6, spaceBetween: 36, centeredSlides: true },
+              1280: { slidesPerView: 1.8, spaceBetween: 40, centeredSlides: true },
+              1536: { slidesPerView: 2.2, spaceBetween: 44, centeredSlides: true }
             }}
             loop={true}
+            loopAdditionalSlides={2}
             navigation={true}
             pagination={{
               clickable: true,
               dynamicBullets: true
             }}
             onSlideChange={pauseAllVideos}
-            className="mb-8 testimonials-carousel"
+            className="mb-8 testimonials-carousel !px-4"
           >
             {videoTestimonials.map((videoUrl, index) => (
               <SwiperSlide key={index}>
@@ -190,26 +194,30 @@ const Testimonials = () => {
         </div>
 
         {/* Segundo Carrossel de Depoimentos em Vídeo - COM LOOP INFINITO */}
-        <div className="mb-8 md:mb-12">
+        <div className="mb-8 md:mb-12 overflow-hidden">
           <Swiper
             modules={[Navigation, Pagination]}
-            spaceBetween={16}
-            slidesPerView={1.4}
+            spaceBetween={20}
+            slidesPerView={1.2}
             centeredSlides={true}
+            initialSlide={1}
             breakpoints={{
-              640: { slidesPerView: 1.5, spaceBetween: 20, centeredSlides: true },
-              768: { slidesPerView: 1.6, spaceBetween: 24, centeredSlides: true },
-              1024: { slidesPerView: 1.8, spaceBetween: 28, centeredSlides: true },
-              1280: { slidesPerView: 2.0, spaceBetween: 32, centeredSlides: true }
+              480: { slidesPerView: 1.3, spaceBetween: 24, centeredSlides: true },
+              640: { slidesPerView: 1.4, spaceBetween: 28, centeredSlides: true },
+              768: { slidesPerView: 1.5, spaceBetween: 32, centeredSlides: true },
+              1024: { slidesPerView: 1.6, spaceBetween: 36, centeredSlides: true },
+              1280: { slidesPerView: 1.8, spaceBetween: 40, centeredSlides: true },
+              1536: { slidesPerView: 2.2, spaceBetween: 44, centeredSlides: true }
             }}
             loop={true}
+            loopAdditionalSlides={2}
             navigation={true}
             pagination={{
               clickable: true,
               dynamicBullets: true
             }}
             onSlideChange={pauseAllVideos}
-            className="mb-8 testimonials-carousel"
+            className="mb-8 testimonials-carousel !px-4"
           >
             {videoTestimonials.map((videoUrl, index) => (
               <SwiperSlide key={`second-${index}`}>
