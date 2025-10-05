@@ -273,7 +273,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
               {/* Audio Player abaixo da imagem - MOBILE ONLY */}
               <div className="mb-6">
-                <CustomAudioPlayer audioUrl="https://vjcdbzrdkbzorkhzkyfm.supabase.co/storage/v1/object/public/cobertura/PLANO-R-6990-3%20(1).mp3" />
+                <CustomAudioPlayer audioUrl="/audio/PLANO-R-6990-3 (1).mp3" />
               </div>
 
               {/* Novo título centralizado em negrito após o áudio */}
@@ -618,7 +618,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
               {/* Audio Player abaixo da imagem - DESKTOP */}
               <div className="mb-6">
-                <CustomAudioPlayer audioUrl="https://vjcdbzrdkbzorkhzkyfm.supabase.co/storage/v1/object/public/cobertura/PLANO-R-6990-3%20(1).mp3" />
+                <CustomAudioPlayer audioUrl="/audio/PLANO-R-6990-3 (1).mp3" />
               </div>
 
               {/* Novo título centralizado em negrito após o áudio */}
