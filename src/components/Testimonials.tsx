@@ -89,9 +89,9 @@ const Testimonials = () => {
               1024: { slidesPerView: 2.3, spaceBetween: 24 },
               1280: { slidesPerView: 2.8, spaceBetween: 28 }
             }}
-            loop={false}
+            loop={true}
             navigation={true}
-            pagination={{ 
+            pagination={{
               clickable: true,
               dynamicBullets: true
             }}
