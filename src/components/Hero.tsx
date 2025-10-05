@@ -595,53 +595,85 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
         </div>
 
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
-          {/* COLUNA DIREITA - DESKTOP ONLY */}
-          <div className="relative hidden md:block">
-            {/* CARD DE BENEFÍCIOS - DESKTOP */}
-            <div className="p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-              <h2 className="text-xl md:text-2xl font-bold mb-4 text-gray-900">
-                Sua internet não ta durando o mês todo? Chega de sofrer com internet ruim. Aqui na Federal Associados você tem internet ilimitada de verdade tanto para área urbana como rural.
+        {/* VERSÃO DESKTOP - IDÊNTICA À MOBILE */}
+        <div className="hidden md:block">
+          <div className="mt-1">
+            <div className="p-3">
+              <h2 className="text-xl font-bold mb-4 text-gray-900">
+                Sua internet não tá durando o mês todo? <span className="text-red-600 font-bold bg-red-100 px-2 py-1 rounded">PARE DE JOGAR O SEU DINHEIRO NO LIXO</span>. E comece a economizar mais de 70% com a sua internet, vem você também para a
               </h2>
-              <div className="mb-4 text-gray-600">
-                <p className="text-xl mb-4">Quantas vezes você já passou por esse momento humilhante de tentar pagar uma conta, pedir um carro ou mandar aquela mensagem extremamente importante… e a internet simplesmente parou, te deixando na mão mais uma vez?</p>
-                
-                <p className="text-xl mb-4 font-bold">Eu sei o quanto isso é constrangedor. A gente fica sem saber o que fazer, de tanta vergonha e raiva na hora. Mas não deveria ser assim. Você merece mais. Você merece ter uma internet de verdade.</p>
-                
-                <p className="text-xl mb-4">Você está cansado de passar por essas situações vergonhosas? Cansado de depender do Wi-Fi dos outros ao sair de casa?</p>
-                
-                <div className="mb-4">
-                  <button
-                    onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-                    className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600 shadow-lg text-base py-3 px-6"
-                  >
-                    Sim, estou cansado disso
-                  </button>
-                </div>
-                
-                <p className="text-xl font-black">Agora imagine ter internet 4G/5G verdadeiramente ilimitada para navegar o mês inteiro sem preocupações. Aqui na Federal Associados você tem um chip com a melhor conexão 4G/5G do Brasil: Internet rápida, estável e ilimitada de verdade.</p>
-              </div>
-              
-              {/* Imagem e legenda após benefícios - DESKTOP */}
-              <div className="mt-6 mb-6 text-center">
-                <div className="max-w-md mx-auto mb-3">
+
+              {/* Nova imagem centralizada abaixo do título - DESKTOP */}
+              <div className="mb-6 text-center">
+                <div className="max-w-xs mx-auto">
                   <img
-                    src="https://qkbeuebapuqnlpjgcvxb.supabase.co/storage/v1/object/public/imagem/federalassociadosimg2alt.webp"
-                    alt="Federal Associados - Internet ilimitada"
-                    className="w-full h-auto rounded-lg shadow-lg"
+                    src="/images/imagem.jpg"
+                    alt="Homem com celular Federal Associados"
+                    className="w-full h-auto rounded-xl shadow-lg bg-white"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                  Ao se associar na Federal Associados, você recebe um chip com benefícios exclusivos que só os nossos associados têm.
-                </p>
               </div>
 
-              <div className="mt-6 text-center">
-                <p className="text-sm text-gray-700">Mais de 100.000 brasileiros já estão usando internet ilimitada de verdade. Veja o que dizem as pessoas que já fazem parte da nossa família Federal Associados.</p>
-                
-                {/* Carrossel de vídeos de depoimentos - DESKTOP */}
-                <div className="mt-6">
+              {/* Audio Player abaixo da imagem - DESKTOP */}
+              <div className="mb-6">
+                <CustomAudioPlayer audioUrl="https://vjcdbzrdkbzorkhzkyfm.supabase.co/storage/v1/object/public/cobertura/PLANO-R-6990-3%20(1).mp3" />
+              </div>
+
+              {/* Novo título centralizado em negrito após o áudio */}
+              <div className="mb-6 text-center">
+                <div className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 rounded-2xl p-6 shadow-lg border border-blue-100">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-blue-100 rounded-full filter blur-3xl opacity-30 -z-10"></div>
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-blue-200 rounded-full filter blur-2xl opacity-20 -z-10"></div>
+
+                  <p className="text-lg text-gray-700 leading-relaxed mb-3">
+                    Aqui você se juntará aos mais de
+                  </p>
+
+                  <div className="mb-3">
+                    <span className="text-6xl font-black text-blue-600 tracking-tight block leading-none">
+                      100.000
+                    </span>
+                    <span className="text-xl font-bold text-gray-800 mt-2 block">
+                      brasileiros
+                    </span>
+                  </div>
+
+                  <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                    que têm um plano de internet móvel <span className="font-bold text-gray-900">realmente ilimitado</span>, tanto para <span className="font-semibold text-gray-800">área urbana como rural</span>.
+                  </p>
+
+                  <div className="flex items-center justify-center gap-4 mb-3 flex-wrap">
+                    <div className="bg-white rounded-lg px-4 py-2 shadow-sm border border-blue-100">
+                      <span className="text-sm font-semibold text-blue-600">Chip Físico</span>
+                    </div>
+                    <div className="text-blue-400 font-bold">ou</div>
+                    <div className="bg-white rounded-lg px-4 py-2 shadow-sm border border-blue-100">
+                      <span className="text-sm font-semibold text-blue-600">Chip Virtual</span>
+                    </div>
+                  </div>
+
+                  <p className="text-base font-bold text-red-600 bg-red-50 inline-block px-4 py-2 rounded-lg">
+                    Chega de sofrer com internet ruim
+                  </p>
+                </div>
+              </div>
+
+              {/* Seção de Depoimentos movida para cá */}
+              <div className="mt-6 mb-6">
+                <div className="text-center mb-4">
+                  <div className="inline-flex items-center justify-center bg-blue-100 text-blue-600 rounded-full px-4 py-1 text-sm font-medium mb-2">
+                    <Star className="h-4 w-4 mr-1" /> DEPOIMENTOS
+                  </div>
+                  <h2 className="text-xl font-bold mb-2 text-gray-900">De alguns dos nossos Associados</h2>
+                  <p className="text-base text-gray-600 mb-4">
+                    Veja o que dizem as pessoas que já fazem parte da nossa família Federal Associados.
+                  </p>
+                </div>
+
+                {/* PRIMEIRO CARROSSEL DE VÍDEOS - movido de baixo */}
+                <div className="mb-6">
                   <Swiper
                     modules={[Navigation, Pagination]}
                     spaceBetween={16}
@@ -650,7 +682,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     loopedSlides={5}
                     centeredSlides={false}
                     navigation={true}
-                    pagination={{ 
+                    pagination={{
                       clickable: true,
                       dynamicBullets: true
                     }}
@@ -658,6 +690,8 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     className="mb-6 testimonials-carousel"
                   >
                     {[
+                      '/testimonials/2 copy copy.mp4',
+                      '/testimonials/3.mp4',
                       'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos/video_2025-09-11_05-31-35.mp4',
                       'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos/video_2025-09-11_05-31-30.mp4',
                       'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/videos/video_2025-09-07_05-55-55.mp4',
@@ -672,7 +706,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                       <SwiperSlide key={index}>
                         <div className="relative aspect-square bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
                           <video
-                            className="absolute inset-0 w-full h-full object-contain bg-black hero-testimonial-video-desktop"
+                            className="absolute inset-0 w-full h-full object-contain bg-black hero-testimonial-video"
                             preload="auto"
                             playsInline
                             controls
@@ -680,15 +714,13 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                             onContextMenu={(e) => e.preventDefault()}
                             src={videoUrl}
                             onError={(e) => {
-                              // Try to reload the video
                               const video = e.currentTarget;
                               setTimeout(() => {
                                 video.load();
                               }, 1000);
                             }}
                             onPlay={(e) => {
-                              // Quando um vídeo começa a tocar, pausa todos os outros
-                              const allVideos = document.querySelectorAll('.hero-testimonial-video-desktop');
+                              const allVideos = document.querySelectorAll('.hero-testimonial-video');
                               allVideos.forEach(video => {
                                 if (video !== e.currentTarget && !video.paused) {
                                   (video as HTMLVideoElement).pause();
@@ -717,9 +749,185 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     ))}
                   </Swiper>
                 </div>
+
+                {/* Carrossel de Imagens */}
+                <div className="mb-6">
+                  <Swiper
+                    modules={[Navigation, Pagination, Autoplay]}
+                    spaceBetween={16}
+                    slidesPerView={1}
+                    loop={true}
+                    autoplay={{
+                      delay: 4000,
+                      disableOnInteraction: false,
+                      pauseOnMouseEnter: true
+                    }}
+                    navigation={true}
+                    pagination={{
+                      clickable: true,
+                      dynamicBullets: true
+                    }}
+                  >
+                    {[
+                      '/testimonials/photo_2025-06-12_05-31-05.jpg',
+                      '/testimonials/photo_2025-06-12_05-31-11.jpg',
+                      '/testimonials/photo_2025-06-12_05-31-16.jpg',
+                      '/testimonials/photo_2025-06-12_05-31-21.jpg',
+                      '/testimonials/photo_2025-06-12_05-31-24.jpg'
+                    ].map((image, index) => (
+                      <SwiperSlide key={index}>
+                        <div className="bg-white rounded-xl p-3 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200">
+                          <div className="flex flex-col items-center">
+                            <div className="w-full aspect-square overflow-hidden rounded-lg mb-2">
+                              <img
+                                src={image}
+                                alt={`Depoimento ${index + 1}`}
+                                className="w-full h-full object-contain bg-gray-50"
+                              />
+                            </div>
+                            <div className="flex items-center justify-center">
+                              {[...Array(5)].map((_, i) => (
+                                <Star key={i} className="h-3 w-3 text-yellow-400 fill-current" />
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+
+                {/* SEGUNDO CARROSSEL DE VÍDEOS - movido do final */}
+                <div className="mb-6">
+                  <Swiper
+                    modules={[Navigation, Pagination]}
+                    spaceBetween={12}
+                    slidesPerView={1}
+                    loop={false}
+                    navigation={true}
+                    pagination={{
+                      clickable: true,
+                      dynamicBullets: true
+                    }}
+                    onSlideChange={pauseAllTestimonialVideos}
+                    className="testimonials-carousel"
+                  >
+                    {[
+                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//2.mp4',
+                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//3.mp4',
+                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//4.mp4',
+                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//5.mp4',
+                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/1.mp4',
+                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//1.mp4',
+                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/2.mp4',
+                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/4.mp4',
+                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/5.mp4',
+                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/7.mp4',
+                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos//15.mp4',
+                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos//17.mp4',
+                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos//21.mp4',
+                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos//20.mp4'
+                    ].map((videoUrl, index) => (
+                      <SwiperSlide key={index}>
+                        <div className="relative aspect-square bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                          <video
+                            className="absolute inset-0 w-full h-full object-contain bg-black hero-testimonial-video"
+                            preload="metadata"
+                            playsInline
+                            controls
+                            controlsList="nodownload"
+                            onContextMenu={(e) => e.preventDefault()}
+                            src={videoUrl}
+                            onPlay={(e) => {
+                              const allVideos = document.querySelectorAll('video');
+                              allVideos.forEach(video => {
+                                if (video !== e.currentTarget && !video.paused) {
+                                  video.pause();
+                                }
+                              });
+                            }}
+                          >
+                            <style>
+                              {`
+                                video::-webkit-media-controls-overflow-menu-button,
+                                video::-webkit-media-controls-overflow-menu-list,
+                                video::-webkit-media-controls-download-button {
+                                  display: none !important;
+                                }
+                                video::-webkit-media-controls-enclosure {
+                                  overflow: hidden !important;
+                                }
+                                video::-webkit-media-controls-panel {
+                                  overflow: clip !important;
+                                }
+                              `}
+                            </style>
+                          </video>
+                        </div>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </div>
+
+                {/* Contador de Associados */}
+                <div className="text-center mb-4">
+                  <div className="inline-block bg-blue-50 rounded-lg p-4 border border-blue-200 shadow-lg">
+                    <p className="text-xl font-bold text-gray-900 mb-1">+ de 100.000 associados satisfeitos</p>
+                    <p className="text-sm text-gray-600">
+                      Junte-se a milhares de pessoas que já descobriram a liberdade de uma internet sem limites
+                    </p>
+                  </div>
+                </div>
+
+                {/* Botão CTA */}
+                <div className="text-center">
+                  <button
+                    onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
+                    className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600 shadow-lg text-lg py-4 px-6"
+                  >
+                    Quero Fazer Parte Também
+                  </button>
+                </div>
               </div>
-              
-              <div className="mt-6">
+
+              <div className="mb-4 text-gray-600 text-left">
+                <p className="text-lg mb-4">Quantas vezes você já passou por esse momento humilhante de tentar pagar uma conta, pedir um carro ou mandar aquela mensagem extremamente importante… e a internet simplesmente parou, te deixando na mão mais uma vez?</p>
+
+                <p className="text-lg mb-4 font-bold">Eu sei o quanto isso é constrangedor. A gente fica sem saber o que fazer, de tanta vergonha e raiva na hora. Mas não deveria ser assim. Você merece mais. Você merece ter uma internet de verdade.</p>
+
+                <p className="text-lg mb-4">Você está cansado de passar por essas situações vergonhosas? Cansado de depender do Wi-Fi dos outros ao sair de casa?</p>
+
+                <div className="mb-4">
+                  <button
+                    onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
+                    className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600 shadow-lg text-base py-3 px-6"
+                  >
+                    Sim, estou cansado disso
+                  </button>
+                </div>
+
+                <p className="text-lg mb-4">Junte-se aos mais de 100.000 brasileiros que já estão economizando mais de 70% com sua internet todos os meses.</p>
+
+                <p className="text-lg font-black">Agora imagine ter internet 4G/5G verdadeiramente ilimitada para navegar o mês inteiro sem preocupações. Aqui na Federal Associados você tem um chip com a melhor conexão 4G/5G do Brasil: Internet rápida, estável e ilimitada de verdade.</p>
+              </div>
+
+              {/* Imagem e legenda após benefícios - DESKTOP */}
+              <div className="mb-4">
+                <div className="max-w-md mx-auto mb-3">
+                  <img
+                    src="https://qkbeuebapuqnlpjgcvxb.supabase.co/storage/v1/object/public/imagem/federalassociadosimg2alt.webp"
+                    alt="Federal Associados - Internet ilimitada"
+                    className="w-full h-auto rounded-lg shadow-lg"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-base text-gray-700 leading-relaxed text-center">
+                  Ao se associar na Federal Associados, você recebe um chip com benefícios exclusivos que só os nossos associados têm.
+                </p>
+              </div>
+
+
+              <div className="mt-4">
                 <button
                   onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
                   className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600 shadow-lg text-base py-3 px-6 button-glow"
