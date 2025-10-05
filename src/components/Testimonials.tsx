@@ -81,14 +81,14 @@ const Testimonials = () => {
         <div className="mb-8 md:mb-12">
           <Swiper
             modules={[Navigation, Pagination]}
-            spaceBetween={12}
-            slidesPerView={1}
+            spaceBetween={16}
+            slidesPerView={1.4}
             centeredSlides={true}
             breakpoints={{
-              640: { slidesPerView: 1.3, spaceBetween: 16, centeredSlides: true },
-              768: { slidesPerView: 1.8, spaceBetween: 20, centeredSlides: true },
-              1024: { slidesPerView: 2.3, spaceBetween: 24, centeredSlides: true },
-              1280: { slidesPerView: 2.8, spaceBetween: 28, centeredSlides: true }
+              640: { slidesPerView: 1.5, spaceBetween: 20, centeredSlides: true },
+              768: { slidesPerView: 1.6, spaceBetween: 24, centeredSlides: true },
+              1024: { slidesPerView: 1.8, spaceBetween: 28, centeredSlides: true },
+              1280: { slidesPerView: 2.0, spaceBetween: 32, centeredSlides: true }
             }}
             loop={true}
             navigation={true}
@@ -193,14 +193,14 @@ const Testimonials = () => {
         <div className="mb-8 md:mb-12">
           <Swiper
             modules={[Navigation, Pagination]}
-            spaceBetween={12}
-            slidesPerView={1}
+            spaceBetween={16}
+            slidesPerView={1.4}
             centeredSlides={true}
             breakpoints={{
-              640: { slidesPerView: 1.3, spaceBetween: 16, centeredSlides: true },
-              768: { slidesPerView: 1.8, spaceBetween: 20, centeredSlides: true },
-              1024: { slidesPerView: 2.3, spaceBetween: 24, centeredSlides: true },
-              1280: { slidesPerView: 2.8, spaceBetween: 28, centeredSlides: true }
+              640: { slidesPerView: 1.5, spaceBetween: 20, centeredSlides: true },
+              768: { slidesPerView: 1.6, spaceBetween: 24, centeredSlides: true },
+              1024: { slidesPerView: 1.8, spaceBetween: 28, centeredSlides: true },
+              1280: { slidesPerView: 2.0, spaceBetween: 32, centeredSlides: true }
             }}
             loop={true}
             navigation={true}
