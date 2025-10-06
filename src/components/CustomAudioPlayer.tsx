@@ -11,9 +11,7 @@ const CustomAudioPlayer: React.FC<CustomAudioPlayerProps> = ({ audioUrl }) => {
   const [duration, setDuration] = useState(0);
   const [showSpeedMenu, setShowSpeedMenu] = useState(false);
   const [playbackRate, setPlaybackRate] = useState(1);
-  const [hasAutoPlayed, setHasAutoPlayed] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -43,35 +41,6 @@ const CustomAudioPlayer: React.FC<CustomAudioPlayerProps> = ({ audioUrl }) => {
     };
   }, []);
 
-  useEffect(() => {
-    const container = containerRef.current;
-    const audio = audioRef.current;
-    if (!container || !audio || hasAutoPlayed) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAutoPlayed) {
-            setTimeout(() => {
-              audio.play().then(() => {
-                setIsPlaying(true);
-                setHasAutoPlayed(true);
-              }).catch(() => {
-                setHasAutoPlayed(true);
-              });
-            }, 500);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    observer.observe(container);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, [hasAutoPlayed]);
 
   const togglePlay = () => {
     const audio = audioRef.current;
@@ -111,7 +80,7 @@ const CustomAudioPlayer: React.FC<CustomAudioPlayerProps> = ({ audioUrl }) => {
   };
 
   return (
-    <div ref={containerRef} className="w-full max-w-4xl mx-auto">
+    <div className="w-full max-w-4xl mx-auto">
       <audio ref={audioRef} src={audioUrl} preload="metadata" />
 
       <style>{`
