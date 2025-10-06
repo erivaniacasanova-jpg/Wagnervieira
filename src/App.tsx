@@ -13,6 +13,7 @@ import PBISection from './components/PBISection';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import ChatbotWidget from './components/ChatbotWidget';
 import CadastroModal from './components/CadastroModal';
 
 function App() {
@@ -66,6 +67,9 @@ function App() {
           isOpen={isCadastroModalOpen}
           onClose={() => setIsCadastroModalOpen(false)}
         />
+
+        {/* Chatbot Widget - acima do WhatsApp */}
+        <ChatbotWidget />
 
         {/* WhatsApp Button - sempre visível */}
         <WhatsAppButton />
