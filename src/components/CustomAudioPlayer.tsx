@@ -11,7 +11,9 @@ const CustomAudioPlayer: React.FC<CustomAudioPlayerProps> = ({ audioUrl }) => {
   const [duration, setDuration] = useState(0);
   const [showSpeedMenu, setShowSpeedMenu] = useState(false);
   const [playbackRate, setPlaybackRate] = useState(1);
+  const [hasAutoPlayed, setHasAutoPlayed] = useState(false);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -40,6 +42,36 @@ const CustomAudioPlayer: React.FC<CustomAudioPlayerProps> = ({ audioUrl }) => {
       audio.removeEventListener('ended', handleEnded);
     };
   }, []);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const audio = audioRef.current;
+    if (!container || !audio || hasAutoPlayed) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAutoPlayed) {
+            setTimeout(() => {
+              audio.play().then(() => {
+                setIsPlaying(true);
+                setHasAutoPlayed(true);
+              }).catch(() => {
+                setHasAutoPlayed(true);
+              });
+            }, 500);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(container);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [hasAutoPlayed]);
 
   const togglePlay = () => {
     const audio = audioRef.current;
@@ -79,13 +111,27 @@ const CustomAudioPlayer: React.FC<CustomAudioPlayerProps> = ({ audioUrl }) => {
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
+    <div ref={containerRef} className="w-full max-w-4xl mx-auto">
       <audio ref={audioRef} src={audioUrl} preload="metadata" />
+
+      <style>{`
+        @keyframes pulse-audio {
+          0%, 100% {
+            box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+          }
+          50% {
+            box-shadow: 0 0 0 12px rgba(59, 130, 246, 0);
+          }
+        }
+        .pulse-button {
+          animation: pulse-audio 2s infinite;
+        }
+      `}</style>
 
       <div className="bg-gray-100 rounded-full px-6 py-4 flex items-center justify-center gap-4 shadow-md">
         <button
           onClick={togglePlay}
-          className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-transparent hover:bg-gray-200 rounded-full transition-colors"
+          className={`flex-shrink-0 w-10 h-10 flex items-center justify-center bg-transparent hover:bg-gray-200 rounded-full transition-colors ${!isPlaying ? 'pulse-button' : ''}`}
           aria-label={isPlaying ? 'Pausar' : 'Play'}
         >
           {isPlaying ? (
