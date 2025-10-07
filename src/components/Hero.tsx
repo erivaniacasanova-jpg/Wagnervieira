@@ -458,7 +458,9 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     modules={[Navigation, Pagination]}
                     spaceBetween={12}
                     slidesPerView={1}
-                    loop={false}
+                    loop={true}
+                    loopedSlides={5}
+                    centeredSlides={false}
                     navigation={true}
                     pagination={{
                       clickable: true,
@@ -803,7 +805,9 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     modules={[Navigation, Pagination]}
                     spaceBetween={12}
                     slidesPerView={1}
-                    loop={false}
+                    loop={true}
+                    loopedSlides={5}
+                    centeredSlides={false}
                     navigation={true}
                     pagination={{
                       clickable: true,
