@@ -84,19 +84,20 @@ const FAQ = () => {
 
         <div className="max-w-3xl mx-auto">
           {faqItems.map((item, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="mb-3 md:mb-4 border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm"
             >
-              <div
-                className="w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center"
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <span className="font-medium text-base md:text-lg text-gray-900">{item.question}</span>
                 {openIndex === index ?
-                  <ChevronUp className="h-4 w-4 md:h-5 md:w-5 text-blue-600" /> :
-                  <ChevronDown className="h-4 w-4 md:h-5 md:w-5 text-gray-600" />
+                  <ChevronUp className="h-4 w-4 md:h-5 md:w-5 text-blue-600 flex-shrink-0 ml-2" /> :
+                  <ChevronDown className="h-4 w-4 md:h-5 md:w-5 text-gray-600 flex-shrink-0 ml-2" />
                 }
-              </div>
+              </button>
               
               <div 
                 className={`px-4 md:px-6 overflow-hidden transition-all duration-300 ease-in-out ${
