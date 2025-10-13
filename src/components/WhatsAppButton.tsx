@@ -8,7 +8,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ onOpenModal }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleClick = () => {
-    window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank');
+    window.open('https://meuu.link/internet-federal-associados', '_blank');
   };
 
   return (

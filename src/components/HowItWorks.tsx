@@ -80,12 +80,6 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ onRedirect }) => {
             <p className="text-base md:text-lg mb-4 md:mb-6 opacity-90 text-white">
               Todo o processo leva menos de 5 minutos. Comece agora e tenha internet ilimitada em suas mãos!
             </p>
-            <button
-              onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-              className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg transition-colors text-base md:text-lg"
-            >
-              Iniciar Meu Cadastro Agora
-            </button>
           </div>
         </div>
       </div>

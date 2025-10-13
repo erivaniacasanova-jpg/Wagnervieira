@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Smartphone, Wifi, Home, Phone, PhoneOff } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import Button from './Button';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -214,12 +213,6 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
             </div>
           )}
         </div>
-        <Button
-          onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 button-glow mt-auto"
-        >
-          QUERO ME ASSOCIAR AGORA
-        </Button>
       </div>
     </div>
   );
@@ -238,32 +231,6 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
             Escolha sua operadora e tipo de plano preferido
           </p>
 
-          {/* Botões das Operadoras */}
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            {operatorPlans.map((operator) => (
-              <button
-                key={operator.operator}
-                onClick={() => {
-                  setSelectedOperator(operator.operator as 'Vivo' | 'Tim' | 'Claro');
-                  // Auto-select plan type based on availability
-                  if (operator.operator === 'Claro' && selectedPlanType === 'withoutCalls') {
-                    setSelectedPlanType('withCalls');
-                  }
-                }}
-                className={`flex items-center justify-center px-6 py-3 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
-                  selectedOperator === operator.operator
-                    ? operator.operator === 'Vivo' 
-                      ? 'bg-purple-600 text-white shadow-lg'
-                      : operator.operator === 'Tim'
-                      ? 'bg-blue-600 text-white shadow-lg'
-                      : 'bg-red-600 text-white shadow-lg'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                {operator.logo}
-              </button>
-            ))}
-          </div>
 
           {/* Filtros de Tipo de Plano */}
           <div className="flex flex-col items-center mb-8">
@@ -273,35 +240,6 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
               <span className="text-blue-500 ml-2">✨</span>
             </div>
             
-            <div className="flex gap-4">
-              <button
-                onClick={() => setSelectedPlanType('withCalls')}
-                disabled={currentOperatorData?.withCalls.length === 0}
-                className={`px-6 py-3 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
-                  selectedPlanType === 'withCalls'
-                    ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg'
-                    : currentOperatorData?.withCalls.length === 0
-                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                Com Ligações
-              </button>
-              
-              <button
-                onClick={() => setSelectedPlanType('withoutCalls')}
-                disabled={currentOperatorData?.withoutCalls.length === 0}
-                className={`px-6 py-3 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
-                  selectedPlanType === 'withoutCalls'
-                    ? 'bg-gradient-to-r from-gray-600 to-gray-700 text-white shadow-lg'
-                    : currentOperatorData?.withoutCalls.length === 0
-                    ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
-              >
-                Sem Ligações
-              </button>
-            </div>
           </div>
         </div>
 
@@ -454,26 +392,10 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
               className="w-full p-3 rounded-md text-black font-semibold mb-4 text-center border border-blue-300 bg-white"
             />
 
-            <button
-              onClick={calculateSavings}
-              className="bg-white hover:bg-gray-100 text-blue-600 font-bold py-2 px-6 rounded-full transition-all button-glow"
-            >
-              Simular economia
-            </button>
 
             {calculationResult && (
               <div className="mt-4 md:mt-6 text-base md:text-lg font-semibold text-white">
                 {calculationResult}
-                {showSignUpButton && (
-                  <div className="mt-4">
-                    <Button
-                      onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-                      className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 button-glow"
-                    >
-                      QUERO ME ASSOCIAR AGORA
-                    </Button>
-                  </div>
-                )}
               </div>
             )}
           </div>

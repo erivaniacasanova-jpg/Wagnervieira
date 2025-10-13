@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Button from './Button';
-import { ArrowRight, Volume2, Play, Pause, VolumeX, Star } from 'lucide-react';
+import { Volume2, Play, Pause, VolumeX, Star } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import CustomAudioPlayer from './CustomAudioPlayer';
@@ -536,15 +535,6 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                   </div>
                 </div>
 
-                {/* Botão CTA */}
-                <div className="text-center">
-                  <button
-                    onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-                    className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600 shadow-lg text-lg py-4 px-6"
-                  >
-                    Quero Fazer Parte Também
-                  </button>
-                </div>
               </div>
 
               <div className="mb-4 text-gray-600 text-left">
@@ -554,14 +544,6 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 
                 <p className="text-lg mb-4">Você está cansado de passar por essas situações vergonhosas? Cansado de depender do Wi-Fi dos outros ao sair de casa?</p>
                 
-                <div className="mb-4">
-                  <button
-                    onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-                    className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600 shadow-lg text-base py-3 px-6"
-                  >
-                    Sim, estou cansado disso
-                  </button>
-                </div>
                 
                 <p className="text-lg mb-4">Junte-se aos mais de 100.000 brasileiros que já estão economizando mais de 70% com sua internet todos os meses.</p>
                 
@@ -584,14 +566,6 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
               </div>
 
               
-              <div className="mt-4">
-                <button
-                  onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-                  className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600 shadow-lg text-base py-3 px-6 button-glow"
-                >
-                  Quero internet ilimitada <ArrowRight className="ml-2 h-6 w-6" />
-                </button>
-              </div>
             </div>
           </div>
         </div>
@@ -883,15 +857,6 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                   </div>
                 </div>
 
-                {/* Botão CTA */}
-                <div className="text-center">
-                  <button
-                    onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-                    className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600 shadow-lg text-lg py-4 px-6"
-                  >
-                    Quero Fazer Parte Também
-                  </button>
-                </div>
               </div>
 
               <div className="mb-4 text-gray-600 text-left">
@@ -901,14 +866,6 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
                 <p className="text-lg mb-4">Você está cansado de passar por essas situações vergonhosas? Cansado de depender do Wi-Fi dos outros ao sair de casa?</p>
 
-                <div className="mb-4">
-                  <button
-                    onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-                    className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600 shadow-lg text-base py-3 px-6"
-                  >
-                    Sim, estou cansado disso
-                  </button>
-                </div>
 
                 <p className="text-lg mb-4">Junte-se aos mais de 100.000 brasileiros que já estão economizando mais de 70% com sua internet todos os meses.</p>
 
@@ -931,14 +888,6 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
               </div>
 
 
-              <div className="mt-4">
-                <button
-                  onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-                  className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600 shadow-lg text-base py-3 px-6 button-glow"
-                >
-                  Quero internet ilimitada <ArrowRight className="ml-2 h-6 w-6" />
-                </button>
-              </div>
             </div>
           </div>
         </div>

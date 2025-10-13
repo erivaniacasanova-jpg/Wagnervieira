@@ -1,5 +1,5 @@
 import React from 'react';
-import { DollarSign, Users, TrendingUp, Gift, CheckCircle, ArrowRight } from 'lucide-react';
+import { DollarSign, Users, TrendingUp, Gift, CheckCircle } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import PBICalculator from './PBICalculator';
@@ -254,14 +254,8 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
               💵 Quanto antes você começar, mais rápido terá internet grátis e renda extra.
             </h3>
             <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8">
-              Clique no botão abaixo e ative seu plano agora mesmo.
+              Ative seu plano agora mesmo.
             </p>
-            <button
-              onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-              className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-600 shadow-lg text-lg py-4 px-8 mb-3"
-            >
-              Quero participar <ArrowRight className="ml-2 h-6 w-6" />
-            </button>
           </div>
         </div>
       </div>

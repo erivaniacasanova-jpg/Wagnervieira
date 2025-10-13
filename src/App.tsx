@@ -14,6 +14,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import CadastroModal from './components/CadastroModal';
+import FixedCTAButton from './components/FixedCTAButton';
 
 function App() {
   const [isCadastroModalOpen, setIsCadastroModalOpen] = useState(false);
@@ -25,6 +26,9 @@ function App() {
   return (
     <ThemeProvider>
       <div className="font-sans text-gray-900 overflow-x-hidden bg-white min-h-screen">
+        {/* Botão Fixo no Topo */}
+        <FixedCTAButton />
+
         {/* 1. HERO - Problema + Agitação */}
         <Hero onRedirect={handleDirectRedirect} />
         

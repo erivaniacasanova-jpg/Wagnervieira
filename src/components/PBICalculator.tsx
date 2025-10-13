@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calculator, TrendingUp, ArrowRight, Calendar } from 'lucide-react';
+import { Calculator, TrendingUp, Calendar } from 'lucide-react';
 
 interface PBICalculatorProps {
   onRedirect: () => void;
@@ -214,12 +214,6 @@ const PBICalculator: React.FC<PBICalculatorProps> = ({ onRedirect }) => {
                 Com {indicacoes} indicados ativos, o valor da sua mensalidade já está pago pela recorrência!
               </p>
               
-              <button
-                onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 md:py-4 md:px-8 text-sm md:text-base rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse"
-              >
-                🚀 QUERO COMEÇAR AGORA E TER INTERNET GRÁTIS! <ArrowRight className="inline h-4 w-4 md:h-5 md:w-5 ml-2" />
-              </button>
             </div>
           )}
 
@@ -233,12 +227,6 @@ const PBICalculator: React.FC<PBICalculatorProps> = ({ onRedirect }) => {
                 Visualize o potencial de crescimento exponencial com indicações constantes.
               </p>
               
-              <button
-                onClick={() => window.open('https://wa.me/5584981321396?text=Ol%C3%A1%2C%20estou%20vindo%20do%20site%20da%20Federal%20Associados.%20Gostaria%20de%20saber%20mais%20como%20funciona%20essa%20internet%2C%20como%20funciona%20a%20contrata%C3%A7%C3%A3o.%20Gostaria%20de%20saber%20de%20todos%20os%20detalhes', '_blank')}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 md:py-3 md:px-6 text-sm md:text-base rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-              >
-                🚀 QUERO COMEÇAR AGORA! <ArrowRight className="inline h-4 w-4 md:h-5 md:w-5 ml-2" />
-              </button>
             </div>
           )}
         </div>
