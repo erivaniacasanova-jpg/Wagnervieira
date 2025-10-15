@@ -28,6 +28,7 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
         </svg>
       ),
       withCalls: [
+        { data: '40GB', price: '49,90' },
         { data: '80GB', price: '69,90' },
         { data: '150GB', price: '99,90' }
       ],
