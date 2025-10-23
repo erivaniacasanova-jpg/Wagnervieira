@@ -2,7 +2,6 @@ import React from 'react';
 import { DollarSign, Users, TrendingUp, Gift, CheckCircle } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import PBICalculator from './PBICalculator';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -113,29 +112,10 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
           </div>
         </div>
 
-        {/* Texto sobre simulação */}
-        <div className="text-center mb-8 md:mb-16">
-          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-            Simule seus ganhos em tempo real. E veja o poder da indicação
-          </p>
-        </div>
-
-        {/* Calculadora de Ganhos PBI */}
-        <div className="mb-8 md:mb-16">
-          <PBICalculator onRedirect={onRedirect} />
-        </div>
-
-        {/* Texto sobre multiplicação */}
-        <div className="text-center mb-8 md:mb-16">
-          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
-            Agora imagina isso se multiplicando cada vez mais, cada vez mais, e sua rede crescendo todos os meses.
-          </p>
-        </div>
-
         {/* Prova Social - Vídeos */}
         <div className="mb-8 md:mb-16">
           <h3 className="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-gray-900">
-            Veja nossos associados recebendo dinheiro
+            Veja nossos associados recebendo suas comissões
           </h3>
           
           {/* Primeira fileira - 3 vídeos */}

@@ -8,8 +8,8 @@ import TrustSection from './components/TrustSection';
 import WrittenTestimonials from './components/WrittenTestimonials';
 import MembershipBenefits from './components/MembershipBenefits';
 import ObjectionsSection from './components/ObjectionsSection';
-import Plans from './components/Plans';
 import PBISection from './components/PBISection';
+import UsageLocations from './components/UsageLocations';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
@@ -52,13 +52,13 @@ function App() {
         
         {/* 8. OBJECTIONS - Remove barreiras finais */}
         <ObjectionsSection onRedirect={handleDirectRedirect} />
-        
-        {/* 9. PLANS - Momento da oferta (quando já estão convencidos) */}
-        <Plans onRedirect={handleDirectRedirect} />
-        
+
+        {/* 9. USAGE LOCATIONS - Onde usar o plano */}
+        <UsageLocations />
+
         {/* 9.5. PBI SECTION - Programa de Indicação para transformar internet em renda */}
         <PBISection onRedirect={handleDirectRedirect} />
-        
+
         {/* 10. FAQ - Últimas dúvidas antes da conversão */}
         <FAQ />
         
