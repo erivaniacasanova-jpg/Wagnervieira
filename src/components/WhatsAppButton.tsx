@@ -8,7 +8,7 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ onOpenModal }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleClick = () => {
-    window.open('https://wa.me/558481321396', '_blank');
+    window.open('https://wa.me/5521996098857', '_blank');
   };
 
   return (

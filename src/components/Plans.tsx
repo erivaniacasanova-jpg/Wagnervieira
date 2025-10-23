@@ -126,7 +126,7 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
   };
 
   const handleDirectRedirect = () => {
-    window.open('https://federalassociadoscadastro.shop', '_blank');
+    window.open('https://federalassociadoscadastro.shop/88389', '_blank');
   };
 
   const renderPlanCard = (plan: any, operator: any, hasVoice: boolean, index: number) => (
