@@ -9,7 +9,7 @@ const FixedCTAButton: React.FC = () => {
         rel="noopener noreferrer"
         className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 hover:scale-105"
       >
-        Quero me associar
+        Quero contratar
       </a>
     </div>
   );

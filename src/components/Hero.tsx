@@ -256,7 +256,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
               <h2 className="text-xl font-bold mb-4 text-gray-900">
                 Sua internet não tá durando o mês todo? <span className="text-red-600 font-bold bg-red-100 px-2 py-1 rounded">PARE DE JOGAR O SEU DINHEIRO NO LIXO</span>. E comece a economizar mais de 70% com a sua internet, vem você também para a
               </h2>
-              
+
               {/* Nova imagem centralizada abaixo do título - MOBILE ONLY */}
               <div className="mb-6 text-center">
                 <div className="max-w-xs mx-auto">
@@ -312,6 +312,32 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     Chega de sofrer com internet ruim
                   </p>
                 </div>
+              </div>
+
+              {/* Imagens dos Planos Clicáveis */}
+              <div className="mb-6 space-y-4">
+                {[
+                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/1.jpg',
+                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/2.jpg',
+                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/3.jpg',
+                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/4.jpg',
+                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/5.jpg'
+                ].map((imageUrl, index) => (
+                  <a
+                    key={index}
+                    href="https://federalassociadoscadastro.shop/88389"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block transition-transform duration-300 hover:scale-105"
+                  >
+                    <img
+                      src={imageUrl}
+                      alt={`Plano ${index + 1}`}
+                      className="w-full h-auto rounded-lg shadow-lg"
+                      loading="lazy"
+                    />
+                  </a>
+                ))}
               </div>
 
               {/* Seção de Depoimentos movida para cá */}
@@ -634,6 +660,32 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     Chega de sofrer com internet ruim
                   </p>
                 </div>
+              </div>
+
+              {/* Imagens dos Planos Clicáveis - Desktop */}
+              <div className="mb-6 space-y-4">
+                {[
+                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/1.jpg',
+                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/2.jpg',
+                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/3.jpg',
+                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/4.jpg',
+                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/5.jpg'
+                ].map((imageUrl, index) => (
+                  <a
+                    key={index}
+                    href="https://federalassociadoscadastro.shop/88389"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block transition-transform duration-300 hover:scale-105"
+                  >
+                    <img
+                      src={imageUrl}
+                      alt={`Plano ${index + 1}`}
+                      className="w-full h-auto rounded-lg shadow-lg"
+                      loading="lazy"
+                    />
+                  </a>
+                ))}
               </div>
 
               {/* Seção de Depoimentos movida para cá */}
