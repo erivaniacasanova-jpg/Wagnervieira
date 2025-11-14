@@ -14,6 +14,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import CadastroModal from './components/CadastroModal';
+import FixedCTAButton from './components/FixedCTAButton';
 
 function App() {
   const [isCadastroModalOpen, setIsCadastroModalOpen] = useState(false);
@@ -69,6 +70,9 @@ function App() {
 
         {/* WhatsApp Button - sempre visível */}
         <WhatsAppButton />
+
+        {/* Fixed CTA Button - botão fixo no centro inferior */}
+        <FixedCTAButton />
       </div>
     </ThemeProvider>
   );

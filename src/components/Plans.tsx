@@ -132,7 +132,8 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
   const renderPlanCard = (plan: any, operator: any, hasVoice: boolean, index: number) => (
     <div
       key={`${operator.operator}-${hasVoice ? 'voice' : 'data'}-${index}`}
-      className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl relative h-full"
+      onClick={handleDirectRedirect}
+      className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl relative h-full cursor-pointer"
     >
       <div className="relative h-2 bg-gray-200 overflow-hidden">
         <div 
