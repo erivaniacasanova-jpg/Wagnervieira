@@ -270,9 +270,35 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </div>
               </div>
 
-              {/* Audio Player abaixo da imagem - MOBILE ONLY */}
-              <div className="mb-6">
-                <CustomAudioPlayer audioUrl="/audio/PLANO-R-6990-3 (1).mp3" />
+              {/* Vídeo abaixo da imagem - MOBILE ONLY */}
+              <div className="mb-6 max-w-xs mx-auto">
+                <div className="relative aspect-[9/16] bg-black rounded-xl overflow-hidden shadow-lg">
+                  <video
+                    className="w-full h-full object-contain"
+                    controls
+                    controlsList="nodownload"
+                    playsInline
+                    preload="metadata"
+                    onContextMenu={(e) => e.preventDefault()}
+                    src="https://qkbeuebapuqnlpjgcvxb.supabase.co/storage/v1/object/public/ativacao/output(compress-video-online.com).mp4"
+                  >
+                    <style>
+                      {`
+                        video::-webkit-media-controls-overflow-menu-button,
+                        video::-webkit-media-controls-overflow-menu-list,
+                        video::-webkit-media-controls-download-button {
+                          display: none !important;
+                        }
+                        video::-webkit-media-controls-enclosure {
+                          overflow: hidden !important;
+                        }
+                        video::-webkit-media-controls-panel {
+                          overflow: clip !important;
+                        }
+                      `}
+                    </style>
+                  </video>
+                </div>
               </div>
 
               {/* Novo título centralizado em negrito após o áudio */}
@@ -618,9 +644,35 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </div>
               </div>
 
-              {/* Audio Player abaixo da imagem - DESKTOP */}
-              <div className="mb-6">
-                <CustomAudioPlayer audioUrl="/audio/PLANO-R-6990-3 (1).mp3" />
+              {/* Vídeo abaixo da imagem - DESKTOP */}
+              <div className="mb-6 max-w-xs mx-auto">
+                <div className="relative aspect-[9/16] bg-black rounded-xl overflow-hidden shadow-lg">
+                  <video
+                    className="w-full h-full object-contain"
+                    controls
+                    controlsList="nodownload"
+                    playsInline
+                    preload="metadata"
+                    onContextMenu={(e) => e.preventDefault()}
+                    src="https://qkbeuebapuqnlpjgcvxb.supabase.co/storage/v1/object/public/ativacao/output(compress-video-online.com).mp4"
+                  >
+                    <style>
+                      {`
+                        video::-webkit-media-controls-overflow-menu-button,
+                        video::-webkit-media-controls-overflow-menu-list,
+                        video::-webkit-media-controls-download-button {
+                          display: none !important;
+                        }
+                        video::-webkit-media-controls-enclosure {
+                          overflow: hidden !important;
+                        }
+                        video::-webkit-media-controls-panel {
+                          overflow: clip !important;
+                        }
+                      `}
+                    </style>
+                  </video>
+                </div>
               </div>
 
               {/* Novo título centralizado em negrito após o áudio */}
