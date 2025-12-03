@@ -126,7 +126,7 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
   };
 
   const handleDirectRedirect = () => {
-    window.open('https://wagner.conecteseagora.com.br/', '_blank');
+    window.open('https://wagner.federalassociadoscadastro.shop', '_blank');
   };
 
   const renderPlanCard = (plan: any, operator: any, hasVoice: boolean, index: number) => (

@@ -351,7 +351,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 ].map((imageUrl, index) => (
                   <a
                     key={index}
-                    href="https://www.federalassociadoscadastro.shop/88389"
+                    href="https://wagner.federalassociadoscadastro.shop"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block transition-transform duration-300 hover:scale-105"
@@ -725,7 +725,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 ].map((imageUrl, index) => (
                   <a
                     key={index}
-                    href="https://www.federalassociadoscadastro.shop/88389"
+                    href="https://wagner.federalassociadoscadastro.shop"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block transition-transform duration-300 hover:scale-105"
