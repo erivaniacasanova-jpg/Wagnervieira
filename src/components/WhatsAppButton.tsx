@@ -7,22 +7,23 @@ interface WhatsAppButtonProps {
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ onOpenModal }) => {
   const [showTooltip, setShowTooltip] = useState(false);
 
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     window.open('https://wa.me/5521996098857', '_blank');
   };
 
   return (
-    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50">
-      <div className="relative">
+    <div className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-[9999] pointer-events-none">
+      <div className="relative pointer-events-auto">
         {/* Tooltip verde que aparece apenas no hover */}
-        <div 
-          className={`absolute right-full mr-3 bg-green-500 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-xl transition-all duration-300 pointer-events-none min-w-max z-50 ${
+        <div
+          className={`absolute right-full mr-3 bg-green-500 text-white px-4 py-2 rounded-lg text-sm font-medium shadow-xl transition-all duration-300 pointer-events-none min-w-max ${
             showTooltip ? 'opacity-100 translate-x-0 visible' : 'opacity-0 translate-x-4 invisible'
           }`}
           style={{
             bottom: '50%',
-            transform: 'translateY(50%)',
-            zIndex: 9999
+            transform: 'translateY(50%)'
           }}
         >
           <div className="flex items-center whitespace-nowrap">
@@ -32,13 +33,16 @@ const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ onOpenModal }) => {
           {/* Seta do balão */}
           <div className="absolute top-1/2 -right-2 transform -translate-y-1/2 w-0 h-0 border-l-8 border-l-green-500 border-t-4 border-t-transparent border-b-4 border-b-transparent drop-shadow-sm"></div>
         </div>
-        
+
         {/* Botão principal com logo oficial do WhatsApp */}
         <button
+          type="button"
           onClick={handleClick}
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
-          className="group relative flex items-center justify-center w-16 h-16 md:w-18 md:h-18 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 animate-whatsapp-pulse focus:outline-none focus:ring-4 focus:ring-green-300"
+          onTouchStart={() => setShowTooltip(true)}
+          onTouchEnd={() => setShowTooltip(false)}
+          className="group relative flex items-center justify-center w-16 h-16 md:w-18 md:h-18 bg-green-500 hover:bg-green-600 active:bg-green-700 text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 animate-whatsapp-pulse focus:outline-none focus:ring-4 focus:ring-green-300 cursor-pointer touch-manipulation"
           aria-label="Entrar em contato via WhatsApp"
         >
           {/* Logo oficial do WhatsApp em SVG */}
