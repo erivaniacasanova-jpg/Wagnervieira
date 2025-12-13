@@ -8,7 +8,6 @@ import TrustSection from './components/TrustSection';
 import WrittenTestimonials from './components/WrittenTestimonials';
 import MembershipBenefits from './components/MembershipBenefits';
 import ObjectionsSection from './components/ObjectionsSection';
-import PBISection from './components/PBISection';
 import UsageLocations from './components/UsageLocations';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
@@ -52,9 +51,6 @@ function App() {
 
         {/* 9. USAGE LOCATIONS - Onde usar o plano */}
         <UsageLocations />
-
-        {/* 9.5. PBI SECTION - Programa de Indicação para transformar internet em renda */}
-        <PBISection onRedirect={handleDirectRedirect} />
 
         {/* 10. FAQ - Últimas dúvidas antes da conversão */}
         <FAQ />

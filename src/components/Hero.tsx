@@ -254,23 +254,13 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           <div className="mt-1 md:hidden">
             <div className="p-3">
               <h2 className="text-xl font-bold mb-4 text-gray-900">
-                Sua internet não tá durando o mês todo? <span className="text-red-600 font-bold bg-red-100 px-2 py-1 rounded">PARE DE JOGAR O SEU DINHEIRO NO LIXO</span>. E comece a economizar mais de 70% com a sua internet, vem você também para a
+                Sua internet acaba antes do fim do mês?
               </h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Descubra como milhares de brasileiros estão pagando até 70% menos sem trocar de operadora
+              </p>
 
-              {/* Nova imagem centralizada abaixo do título - MOBILE ONLY */}
-              <div className="mb-6 text-center">
-                <div className="max-w-xs mx-auto">
-                  <img
-                    src="/images/imagem.jpg"
-                    alt="Homem com celular Federal Associados"
-                    className="w-full h-auto rounded-xl shadow-lg bg-white"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-              </div>
-
-              {/* Vídeo abaixo da imagem - MOBILE ONLY */}
+              {/* Primeiro vídeo vertical - MOBILE ONLY */}
               <div className="mb-6 max-w-xs mx-auto">
                 <div className="relative aspect-[9/16] bg-black rounded-xl overflow-hidden shadow-lg">
                   <video
@@ -280,7 +270,83 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     playsInline
                     preload="metadata"
                     onContextMenu={(e) => e.preventDefault()}
-                    src="https://qkbeuebapuqnlpjgcvxb.supabase.co/storage/v1/object/public/ativacao/output(compress-video-online.com).mp4"
+                    src="https://res.cloudinary.com/dupzepqah/video/upload/v1765654725/depoimentos_g5vijt.mp4"
+                  >
+                    <style>
+                      {`
+                        video::-webkit-media-controls-overflow-menu-button,
+                        video::-webkit-media-controls-overflow-menu-list,
+                        video::-webkit-media-controls-download-button {
+                          display: none !important;
+                        }
+                        video::-webkit-media-controls-enclosure {
+                          overflow: hidden !important;
+                        }
+                        video::-webkit-media-controls-panel {
+                          overflow: clip !important;
+                        }
+                      `}
+                    </style>
+                  </video>
+                </div>
+              </div>
+
+              {/* Subtítulo abaixo do primeiro vídeo */}
+              <div className="mb-6 text-center">
+                <p className="text-lg font-bold text-gray-900">
+                  Mais de 100 mil Associados ativos e satisfeitos. Avaliação 5⭐ no Google por Associados Reais
+                </p>
+              </div>
+
+              {/* Segundo vídeo vertical - MOBILE ONLY */}
+              <div className="mb-6 max-w-xs mx-auto">
+                <div className="relative aspect-[9/16] bg-black rounded-xl overflow-hidden shadow-lg">
+                  <video
+                    className="w-full h-full object-contain"
+                    controls
+                    controlsList="nodownload"
+                    playsInline
+                    preload="metadata"
+                    onContextMenu={(e) => e.preventDefault()}
+                    src="https://res.cloudinary.com/dupzepqah/video/upload/v1765655164/depo2_pnvdrl.mp4"
+                  >
+                    <style>
+                      {`
+                        video::-webkit-media-controls-overflow-menu-button,
+                        video::-webkit-media-controls-overflow-menu-list,
+                        video::-webkit-media-controls-download-button {
+                          display: none !important;
+                        }
+                        video::-webkit-media-controls-enclosure {
+                          overflow: hidden !important;
+                        }
+                        video::-webkit-media-controls-panel {
+                          overflow: clip !important;
+                        }
+                      `}
+                    </style>
+                  </video>
+                </div>
+              </div>
+
+              {/* Descrição da oferta relâmpago */}
+              <div className="mb-6 text-center">
+                <p className="text-lg font-bold text-gray-900">
+                  Oferta relâmpago Federal Associados
+                </p>
+              </div>
+
+              {/* Terceiro vídeo vertical - MOBILE ONLY */}
+              <div className="mb-6 max-w-xs mx-auto">
+                <div className="relative aspect-[9/16] bg-black rounded-xl overflow-hidden shadow-lg">
+                  <video
+                    className="w-full h-full object-contain"
+                    controls
+                    controlsList="nodownload"
+                    playsInline
+                    preload="metadata"
+                    onContextMenu={(e) => e.preventDefault()}
+                    src="https://res.cloudinary.com/dupzepqah/video/upload/v1765655359/ofertas_nou4cy.mp4"
                   >
                     <style>
                       {`
@@ -385,7 +451,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     spaceBetween={16}
                     slidesPerView={1}
                     loop={true}
-                    loopedSlides={5}
+                    loopedSlides={2}
                     centeredSlides={false}
                     navigation={true}
                     pagination={{
@@ -396,18 +462,8 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     className="mb-6 testimonials-carousel"
                   >
                     {[
-                      '/testimonials/2 copy copy.mp4',
-                      '/testimonials/3.mp4',
-                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos/video_2025-09-11_05-31-35.mp4',
-                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos/video_2025-09-11_05-31-30.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/videos/video_2025-09-07_05-55-55.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/videos/video_2025-09-07_05-56-02.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/videos/video_2025-09-07_06-00-38.mp4',
-                      'https://luythwgpgfykysnotyfq.supabase.co/storage/v1/object/public/videos/video_2025-09-06_09-33-37.mp4',
-                      'https://luythwgpgfykysnotyfq.supabase.co/storage/v1/object/public/videos/1.mp4',
-                      'https://luythwgpgfykysnotyfq.supabase.co/storage/v1/object/public/videos/2.mp4',
-                      'https://luythwgpgfykysnotyfq.supabase.co/storage/v1/object/public/videos/3.mp4',
-                      'https://luythwgpgfykysnotyfq.supabase.co/storage/v1/object/public/videos/4.mp4'
+                      'https://res.cloudinary.com/dupzepqah/video/upload/v1765655975/1_pxym8d.mp4',
+                      'https://res.cloudinary.com/dupzepqah/video/upload/v1765656003/2_dh9mec.mp4'
                     ].map((videoUrl, index) => (
                       <SwiperSlide key={index}>
                         <div className="relative aspect-square bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
@@ -503,79 +559,6 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                   </Swiper>
                 </div>
 
-                {/* SEGUNDO CARROSSEL DE VÍDEOS - movido do final */}
-                <div className="mb-6 max-w-md mx-auto">
-                  <Swiper
-                    modules={[Navigation, Pagination]}
-                    spaceBetween={12}
-                    slidesPerView={1}
-                    loop={true}
-                    loopedSlides={5}
-                    centeredSlides={false}
-                    navigation={true}
-                    pagination={{
-                      clickable: true,
-                      dynamicBullets: true
-                    }}
-                    onSlideChange={pauseAllTestimonialVideos}
-                    className="testimonials-carousel"
-                  >
-                    {[
-                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//2.mp4',
-                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//3.mp4',
-                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//4.mp4',
-                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//5.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/1.mp4',
-                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//1.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/2.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/4.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/5.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/7.mp4',
-                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos//15.mp4',
-                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos//17.mp4',
-                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos//21.mp4',
-                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos//20.mp4'
-                    ].map((videoUrl, index) => (
-                      <SwiperSlide key={index}>
-                        <div className="relative aspect-square bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                          <video
-                            className="absolute inset-0 w-full h-full object-contain bg-black hero-testimonial-video"
-                            preload="metadata"
-                            playsInline
-                            controls
-                            controlsList="nodownload"
-                            onContextMenu={(e) => e.preventDefault()}
-                            src={videoUrl}
-                            onPlay={(e) => {
-                              const allVideos = document.querySelectorAll('video');
-                              allVideos.forEach(video => {
-                                if (video !== e.currentTarget && !video.paused) {
-                                  video.pause();
-                                }
-                              });
-                            }}
-                          >
-                            <style>
-                              {`
-                                video::-webkit-media-controls-overflow-menu-button,
-                                video::-webkit-media-controls-overflow-menu-list,
-                                video::-webkit-media-controls-download-button {
-                                  display: none !important;
-                                }
-                                video::-webkit-media-controls-enclosure {
-                                  overflow: hidden !important;
-                                }
-                                video::-webkit-media-controls-panel {
-                                  overflow: clip !important;
-                                }
-                              `}
-                            </style>
-                          </video>
-                        </div>
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
-                </div>
 
                 {/* Contador de Associados */}
                 <div className="text-center mb-4">
@@ -628,23 +611,13 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           <div className="mt-1">
             <div className="p-3">
               <h2 className="text-xl font-bold mb-4 text-gray-900">
-                Sua internet não tá durando o mês todo? <span className="text-red-600 font-bold bg-red-100 px-2 py-1 rounded">PARE DE JOGAR O SEU DINHEIRO NO LIXO</span>. E comece a economizar mais de 70% com a sua internet, vem você também para a
+                Sua internet acaba antes do fim do mês?
               </h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Descubra como milhares de brasileiros estão pagando até 70% menos sem trocar de operadora
+              </p>
 
-              {/* Nova imagem centralizada abaixo do título - DESKTOP */}
-              <div className="mb-6 text-center">
-                <div className="max-w-xs mx-auto">
-                  <img
-                    src="/images/imagem.jpg"
-                    alt="Homem com celular Federal Associados"
-                    className="w-full h-auto rounded-xl shadow-lg bg-white"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-              </div>
-
-              {/* Vídeo abaixo da imagem - DESKTOP */}
+              {/* Primeiro vídeo vertical - DESKTOP */}
               <div className="mb-6 max-w-xs mx-auto">
                 <div className="relative aspect-[9/16] bg-black rounded-xl overflow-hidden shadow-lg">
                   <video
@@ -654,7 +627,83 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     playsInline
                     preload="metadata"
                     onContextMenu={(e) => e.preventDefault()}
-                    src="https://qkbeuebapuqnlpjgcvxb.supabase.co/storage/v1/object/public/ativacao/output(compress-video-online.com).mp4"
+                    src="https://res.cloudinary.com/dupzepqah/video/upload/v1765654725/depoimentos_g5vijt.mp4"
+                  >
+                    <style>
+                      {`
+                        video::-webkit-media-controls-overflow-menu-button,
+                        video::-webkit-media-controls-overflow-menu-list,
+                        video::-webkit-media-controls-download-button {
+                          display: none !important;
+                        }
+                        video::-webkit-media-controls-enclosure {
+                          overflow: hidden !important;
+                        }
+                        video::-webkit-media-controls-panel {
+                          overflow: clip !important;
+                        }
+                      `}
+                    </style>
+                  </video>
+                </div>
+              </div>
+
+              {/* Subtítulo abaixo do primeiro vídeo */}
+              <div className="mb-6 text-center">
+                <p className="text-lg font-bold text-gray-900">
+                  Mais de 100 mil Associados ativos e satisfeitos. Avaliação 5⭐ no Google por Associados Reais
+                </p>
+              </div>
+
+              {/* Segundo vídeo vertical - DESKTOP */}
+              <div className="mb-6 max-w-xs mx-auto">
+                <div className="relative aspect-[9/16] bg-black rounded-xl overflow-hidden shadow-lg">
+                  <video
+                    className="w-full h-full object-contain"
+                    controls
+                    controlsList="nodownload"
+                    playsInline
+                    preload="metadata"
+                    onContextMenu={(e) => e.preventDefault()}
+                    src="https://res.cloudinary.com/dupzepqah/video/upload/v1765655164/depo2_pnvdrl.mp4"
+                  >
+                    <style>
+                      {`
+                        video::-webkit-media-controls-overflow-menu-button,
+                        video::-webkit-media-controls-overflow-menu-list,
+                        video::-webkit-media-controls-download-button {
+                          display: none !important;
+                        }
+                        video::-webkit-media-controls-enclosure {
+                          overflow: hidden !important;
+                        }
+                        video::-webkit-media-controls-panel {
+                          overflow: clip !important;
+                        }
+                      `}
+                    </style>
+                  </video>
+                </div>
+              </div>
+
+              {/* Descrição da oferta relâmpago */}
+              <div className="mb-6 text-center">
+                <p className="text-lg font-bold text-gray-900">
+                  Oferta relâmpago Federal Associados
+                </p>
+              </div>
+
+              {/* Terceiro vídeo vertical - DESKTOP */}
+              <div className="mb-6 max-w-xs mx-auto">
+                <div className="relative aspect-[9/16] bg-black rounded-xl overflow-hidden shadow-lg">
+                  <video
+                    className="w-full h-full object-contain"
+                    controls
+                    controlsList="nodownload"
+                    playsInline
+                    preload="metadata"
+                    onContextMenu={(e) => e.preventDefault()}
+                    src="https://res.cloudinary.com/dupzepqah/video/upload/v1765655359/ofertas_nou4cy.mp4"
                   >
                     <style>
                       {`
@@ -759,7 +808,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     spaceBetween={16}
                     slidesPerView={1}
                     loop={true}
-                    loopedSlides={5}
+                    loopedSlides={2}
                     centeredSlides={false}
                     navigation={true}
                     pagination={{
@@ -770,18 +819,8 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     className="mb-6 testimonials-carousel"
                   >
                     {[
-                      '/testimonials/2 copy copy.mp4',
-                      '/testimonials/3.mp4',
-                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos/video_2025-09-11_05-31-35.mp4',
-                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos/video_2025-09-11_05-31-30.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/videos/video_2025-09-07_05-55-55.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/videos/video_2025-09-07_05-56-02.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/videos/video_2025-09-07_06-00-38.mp4',
-                      'https://luythwgpgfykysnotyfq.supabase.co/storage/v1/object/public/videos/video_2025-09-06_09-33-37.mp4',
-                      'https://luythwgpgfykysnotyfq.supabase.co/storage/v1/object/public/videos/1.mp4',
-                      'https://luythwgpgfykysnotyfq.supabase.co/storage/v1/object/public/videos/2.mp4',
-                      'https://luythwgpgfykysnotyfq.supabase.co/storage/v1/object/public/videos/3.mp4',
-                      'https://luythwgpgfykysnotyfq.supabase.co/storage/v1/object/public/videos/4.mp4'
+                      'https://res.cloudinary.com/dupzepqah/video/upload/v1765655975/1_pxym8d.mp4',
+                      'https://res.cloudinary.com/dupzepqah/video/upload/v1765656003/2_dh9mec.mp4'
                     ].map((videoUrl, index) => (
                       <SwiperSlide key={index}>
                         <div className="relative aspect-square bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
@@ -877,79 +916,6 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                   </Swiper>
                 </div>
 
-                {/* SEGUNDO CARROSSEL DE VÍDEOS - movido do final */}
-                <div className="mb-6 max-w-md mx-auto">
-                  <Swiper
-                    modules={[Navigation, Pagination]}
-                    spaceBetween={12}
-                    slidesPerView={1}
-                    loop={true}
-                    loopedSlides={5}
-                    centeredSlides={false}
-                    navigation={true}
-                    pagination={{
-                      clickable: true,
-                      dynamicBullets: true
-                    }}
-                    onSlideChange={pauseAllTestimonialVideos}
-                    className="testimonials-carousel"
-                  >
-                    {[
-                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//2.mp4',
-                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//3.mp4',
-                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//4.mp4',
-                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//5.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/1.mp4',
-                      'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/videos//1.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/2.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/4.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/5.mp4',
-                      'https://njmrvklwyzbofuhqrpbt.supabase.co/storage/v1/object/public/depoimentos/7.mp4',
-                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos//15.mp4',
-                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos//17.mp4',
-                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos//21.mp4',
-                      'https://fznhzqgulsyrjfrzcdqi.supabase.co/storage/v1/object/public/depoimentos//20.mp4'
-                    ].map((videoUrl, index) => (
-                      <SwiperSlide key={index}>
-                        <div className="relative aspect-square bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                          <video
-                            className="absolute inset-0 w-full h-full object-contain bg-black hero-testimonial-video"
-                            preload="metadata"
-                            playsInline
-                            controls
-                            controlsList="nodownload"
-                            onContextMenu={(e) => e.preventDefault()}
-                            src={videoUrl}
-                            onPlay={(e) => {
-                              const allVideos = document.querySelectorAll('video');
-                              allVideos.forEach(video => {
-                                if (video !== e.currentTarget && !video.paused) {
-                                  video.pause();
-                                }
-                              });
-                            }}
-                          >
-                            <style>
-                              {`
-                                video::-webkit-media-controls-overflow-menu-button,
-                                video::-webkit-media-controls-overflow-menu-list,
-                                video::-webkit-media-controls-download-button {
-                                  display: none !important;
-                                }
-                                video::-webkit-media-controls-enclosure {
-                                  overflow: hidden !important;
-                                }
-                                video::-webkit-media-controls-panel {
-                                  overflow: clip !important;
-                                }
-                              `}
-                            </style>
-                          </video>
-                        </div>
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
-                </div>
 
                 {/* Contador de Associados */}
                 <div className="text-center mb-4">
