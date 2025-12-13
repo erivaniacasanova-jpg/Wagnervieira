@@ -257,7 +257,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 Sua internet acaba antes do fim do mês?
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                Descubra como milhares de brasileiros estão pagando até 70% menos sem trocar de operadora
+                Descubra como milhares de brasileiros estão pagando até 70% menos sem trocar de operadora, com a internet turbinada da Federal Associados.
               </p>
 
               {/* Primeiro vídeo vertical - MOBILE ONLY */}
@@ -614,7 +614,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 Sua internet acaba antes do fim do mês?
               </h2>
               <p className="text-lg text-gray-700 mb-6">
-                Descubra como milhares de brasileiros estão pagando até 70% menos sem trocar de operadora
+                Descubra como milhares de brasileiros estão pagando até 70% menos sem trocar de operadora, com a internet turbinada da Federal Associados.
               </p>
 
               {/* Primeiro vídeo vertical - DESKTOP */}
