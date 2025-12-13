@@ -409,9 +409,9 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
               {/* Imagens dos Planos Clicáveis */}
               <div className="mb-6 space-y-4">
                 {[
-                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/1.jpg',
-                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/2.jpg',
-                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/3.jpg',
+                  'https://res.cloudinary.com/dupzepqah/image/upload/v1765657339/1_ghi51y.jpg',
+                  'https://res.cloudinary.com/dupzepqah/image/upload/v1765657340/2_qjq9ep.jpg',
+                  'https://res.cloudinary.com/dupzepqah/image/upload/v1765657340/3_u1urnt.jpg',
                   'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/4.jpg',
                   'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/5.jpg'
                 ].map((imageUrl, index) => (
@@ -766,9 +766,9 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
               {/* Imagens dos Planos Clicáveis - Desktop */}
               <div className="mb-6 space-y-4">
                 {[
-                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/1.jpg',
-                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/2.jpg',
-                  'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/3.jpg',
+                  'https://res.cloudinary.com/dupzepqah/image/upload/v1765657339/1_ghi51y.jpg',
+                  'https://res.cloudinary.com/dupzepqah/image/upload/v1765657340/2_qjq9ep.jpg',
+                  'https://res.cloudinary.com/dupzepqah/image/upload/v1765657340/3_u1urnt.jpg',
                   'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/4.jpg',
                   'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/planos/5.jpg'
                 ].map((imageUrl, index) => (
