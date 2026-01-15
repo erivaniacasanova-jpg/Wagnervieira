@@ -270,7 +270,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     playsInline
                     preload="metadata"
                     onContextMenu={(e) => e.preventDefault()}
-                    src="https://res.cloudinary.com/dupzepqah/video/upload/v1765654725/depoimentos_g5vijt.mp4"
+                    src="https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/Wagner/wagner1.mp4"
                   >
                     <style>
                       {`
@@ -308,7 +308,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     playsInline
                     preload="metadata"
                     onContextMenu={(e) => e.preventDefault()}
-                    src="https://res.cloudinary.com/dupzepqah/video/upload/v1765655164/depo2_pnvdrl.mp4"
+                    src="https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/Wagner/wagner2.mp4"
                   >
                     <style>
                       {`
@@ -346,7 +346,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     playsInline
                     preload="metadata"
                     onContextMenu={(e) => e.preventDefault()}
-                    src="https://res.cloudinary.com/dupzepqah/video/upload/v1765655359/ofertas_nou4cy.mp4"
+                    src="https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/Wagner/wagner3.mp4"
                   >
                     <style>
                       {`
@@ -462,7 +462,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     className="mb-6 testimonials-carousel"
                   >
                     {[
-                      'https://res.cloudinary.com/dupzepqah/video/upload/v1765655975/1_pxym8d.mp4',
+                      'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/Wagner/wagner4.mp4',
                       'https://res.cloudinary.com/dupzepqah/video/upload/v1765656003/2_dh9mec.mp4'
                     ].map((videoUrl, index) => (
                       <SwiperSlide key={index}>
@@ -627,7 +627,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     playsInline
                     preload="metadata"
                     onContextMenu={(e) => e.preventDefault()}
-                    src="https://res.cloudinary.com/dupzepqah/video/upload/v1765654725/depoimentos_g5vijt.mp4"
+                    src="https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/Wagner/wagner1.mp4"
                   >
                     <style>
                       {`
@@ -665,7 +665,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     playsInline
                     preload="metadata"
                     onContextMenu={(e) => e.preventDefault()}
-                    src="https://res.cloudinary.com/dupzepqah/video/upload/v1765655164/depo2_pnvdrl.mp4"
+                    src="https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/Wagner/wagner2.mp4"
                   >
                     <style>
                       {`
@@ -703,7 +703,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     playsInline
                     preload="metadata"
                     onContextMenu={(e) => e.preventDefault()}
-                    src="https://res.cloudinary.com/dupzepqah/video/upload/v1765655359/ofertas_nou4cy.mp4"
+                    src="https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/Wagner/wagner3.mp4"
                   >
                     <style>
                       {`
@@ -819,7 +819,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     className="mb-6 testimonials-carousel"
                   >
                     {[
-                      'https://res.cloudinary.com/dupzepqah/video/upload/v1765655975/1_pxym8d.mp4',
+                      'https://tbtfbpevolielxjvcckg.supabase.co/storage/v1/object/public/Wagner/wagner4.mp4',
                       'https://res.cloudinary.com/dupzepqah/video/upload/v1765656003/2_dh9mec.mp4'
                     ].map((videoUrl, index) => (
                       <SwiperSlide key={index}>
